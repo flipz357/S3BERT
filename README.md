@@ -1,4 +1,4 @@
-# S$^3$BERT: *S*emantically *S*tructured *S*entence Embeddings
+# S<sup>3</sup>BERT: *S*emantically *S*tructured *S*entence Embeddings
 
 Code for generating and training sentence embeddings with semantic features. Two main goals:
 
