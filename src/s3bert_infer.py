@@ -11,15 +11,6 @@ device = torch.device("cuda" if use_cuda else "cpu")
 # get decomposed model
 model = SentenceTransformer("./" + config.SBERT_SAVE_PATH + "/", device="cuda")
 
-# get bias coefficients for sub-metrics (ugly way to load them, todo: find better way)
-fp = config.SBERT_SAVE_PATH + "/eval/accuracy_evaluation_results.csv"
-with open(fp) as f:
-    ll = f.read().split("\n")
-losses = [float(l.split("tensor(")[1].split(",")[0]) for l in ll if "tensor" in l]
-biasess = [ast.literal_eval(l.split(";")[-1]) for l in ll if "tensor" in l]
-amin = np.argmin(losses)
-biases = np.array(biasess[amin]) 
-
 # example sentence pairs
 xsent = [
         "the man isn't singing", "three man are singing", "two cats are looking at a window", 
