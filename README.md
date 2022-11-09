@@ -29,7 +29,7 @@ The basic idea is simple:
 
 1. Define/apply metrics that measure sentence similarity with regard to aspects of interest (e.g., using metrics on dependency trees or AMR graphs, etc.).
 2. Assign a specific sub-embedding to each metric
-3. During training, it learns to route information into the assigned sub-embeddings so that they reflect the different metrics. The power of the overall embedding is fully preserved with consistency control.
+3. During training, it learns to route information into the assigned sub-embeddings so that they can reflect the different metrics. The power of the overall embedding is fully preserved with consistency control.
 
 Note that any computation for metrics or generation of sentence parses or trees is **not needed in inference**.
 
@@ -37,7 +37,7 @@ Note that any computation for metrics or generation of sentence parses or trees 
 
 - `edim`: size of sentence embedding
 - `n`: number of custom metrics
-- `feadim`: dimension of a sentence feature (sentence sub-embedding) that reflects a metric
+- `feadim`: size of a sentence feature (sentence sub-embedding)
 
 Then `feadim` can be set approximately to `(edim - edim / 3)/n`
 
