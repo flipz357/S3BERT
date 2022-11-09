@@ -102,7 +102,7 @@ Downloaded S3BERT models may be unpacked in src
 tar -xvzf s3bert_all-MiniLM-L12-v2 -C src/
 ```
 
-Use pre-trained model: See above (S3BERT embeddings: inference). Use specific `config.py`.
+Use pre-trained model: See above (S3BERT embeddings: inference). Use specific `config.py` (see table above), which is needed so that we know which features are assigned a particular metric.
 
 ### Scores of pre-trained models
 
