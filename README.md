@@ -112,7 +112,6 @@ Use pre-trained model: See above (S3BERT embeddings: inference). Use specific `c
 All numbers are Spearmanr.
 
 | Model | STSB | SICKR | UKPASPECT | Concepts  | Frames  | Named Ent.  | Negations  | Coreference  | SRL  | Smatch  | Unlabeled  | max_indegree_sim | max_outdegree_sim | max_degree_sim | root_sim | quant_sim | score_wlk | score_wwlk |
-
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | s3bert_all-mpnet-base-v2 | 83.5     | **81.1** | **57.9** | **79.8** | **73.0** | **54.5** | **34.9** | **54.9** | **69.8** | **74.7** | **72.0** | **36.2** | **49.6** | **35.3** | **52.3** | **75.3** | **80.8** | **80.3** |
 | all-mpnet-base-v2        | 83.4     | 80.5     | 56.2     | 74.3     | 41.5     | -12.7    | -0.3     | 9.0      | 42.8     | 57.6     | 52.1     | 23.6     | 21.1     | 17.7     | 22.9     | 10.8     | 68.3     | 66.6     |
