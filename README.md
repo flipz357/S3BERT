@@ -37,11 +37,11 @@ Note that any computation for metrics or generation of sentence parses or trees 
 
 From experience with different models, about 1/3 of the embedding may be reserved for the residual.
 
-- edim: size of sentence embedding
-- n: number of custom metrics
-- feadim: dimension of an sentence feature (sentence sub-embedding) that reflects a metric
+- `edim`: size of sentence embedding
+- `n`: number of custom metrics
+- `feadim`: dimension of a sentence feature (sentence sub-embedding) that reflects a metric
 
-Then feadim ~ (edim - edim / 3)/n
+Then `feadim` can be set approximately to `(edim - edim / 3)/n`
 
 ## Full example with AMR 
 
