@@ -94,7 +94,7 @@ We provide pre-trained model here:
 | Model name               | model link | s3bert config |
 | ------------------------ | ---------- | ------------- |
 | s3bert_all-mpnet-base-v2 | [model](https://www.cl.uni-heidelberg.de/~opitz/data/s3bert_all-mpnet-base-v2.tar.gz)  | [config](https://www.cl.uni-heidelberg.de/~opitz/data/config_s3bert_all-mpnet-base-v2.py)    |
-| all-MiniLM-L12-v2        | [model](https://www.cl.uni-heidelberg.de/~opitz/data/s3bert_all-MiniLM-L12-v2.tar.gz)  | [config](https://www.cl.uni-heidelberg.de/~opitz/data/config_s3bert_all-MiniLM-L12-v2.py)    |
+| s3bert_all-MiniLM-L12-v2        | [model](https://www.cl.uni-heidelberg.de/~opitz/data/s3bert_all-MiniLM-L12-v2.tar.gz)  | [config](https://www.cl.uni-heidelberg.de/~opitz/data/config_s3bert_all-MiniLM-L12-v2.py)    |
 
 Downloaded S3BERT models may be unpacked in src
 
