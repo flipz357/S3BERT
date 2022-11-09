@@ -33,9 +33,7 @@ The basic idea is simple:
 
 Note that any computation for metrics or generation of sentence parses or trees is **not needed in inference**.
 
-### Rule of thumb for size of feature dimensions
-
-From experience with different models, about 1/3 of the embedding may be reserved for the residual.
+**Rule of thumb for size of feature dimensions**. From experience with different models, about 1/3 of the embedding may be reserved for the residual.
 
 - `edim`: size of sentence embedding
 - `n`: number of custom metrics
