@@ -26,7 +26,7 @@ xsent_encoded = model.encode(xsent)
 ysent_encoded = model.encode(ysent)
 
 # get similarity scores of different features
-preds = ph.get_preds(xsent_encoded, ysent_encoded, biases=None)
+preds = ph.get_preds(xsent_encoded, ysent_encoded, biases=None, n=config.N, dim=config.FEATURE_DIM)
 
 # print similarity scores of different features
 features = ["global"] + config.FEATURES[2:] + ["residual"]
