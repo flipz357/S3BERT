@@ -119,7 +119,7 @@ All numbers are Spearmanr.
 
 #### Table Column names I: basic similarity benchmarking
 
-For both SBERT and S3BERT the similarity for every pair is calculated beased on the full embeddings.
+For both SBERT and S3BERT the similarity for every pair is calculated on the full embeddings (cosine).
 
 - STSB: results on human sentence similarity benchmark STS 
 - SICKR: results on human relatedness similarity benchmark SICK 
@@ -127,7 +127,7 @@ For both SBERT and S3BERT the similarity for every pair is calculated beased on 
 
 #### Table Column names II: aspect similarity of explainable features
 
-For non S3BERT models the aspect similarity is calculated via the full embedding (constant scores). For S3BERT models the aspect similarities are calculated from the dedicated sub-embeddings.
+For non S3BERT models the aspect similarity is calculated via the full embedding (i.e., it gives the same similarity in every aspect). For S3BERT models the aspect similarities are calculated from the dedicated sub-embeddings.
 
 - Concepts: Similarity w.r.t. to similarity of concepts in sentences 
 - Frames: Similarity w.r.t. to similarity of predicates in sentences 
