@@ -28,10 +28,10 @@ transformers                    (4.16.1)
 The basic idea is simple: 
 
 1. Define/apply metrics that measure sentence similarity with regard to aspects of interest (e.g., using metrics on dependency trees or AMR graphs, etc.).
-2. Train sentence embedding model on pairs of sentences as inputs and targeted semantic metric scores (only pairs of sentences and a list with metric scores is needed as training data)
-3. During training, it learns to partition the sentence vectors into features that reflect the different metrics
+2. Assign a specific sub-embedding to each metric
+3. During training, it learns to route information into the assigned sub-embeddings so that they reflect the different metrics. Catastrophic forgetting is prevented with consistency control.
 
-Note that computation for metrics or generation of sentence parses or trees is **not needed in inference**.
+Note that any computation for metrics or generation of sentence parses or trees is **not needed in inference**.
 
 ### Rule of thumb for size of feature dimensions
 
