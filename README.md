@@ -94,6 +94,7 @@ Check out its content for info on how to obtain and use the embeddings.
 We provide pre-trained model here:
 
 | Model name               | model link | s3bert config |
+| ------------------------ | ---------- | ------------- |
 | s3bert_all-mpnet-base-v2 | [model](https://www.cl.uni-heidelberg.de/~opitz/data/s3bert_all-mpnet-base-v2.tar.gz)  | [config](https://www.cl.uni-heidelberg.de/~opitz/data/config_s3bert_all-mpnet-base-v2.py)    |
 | all-MiniLM-L12-v2        | [model](https://www.cl.uni-heidelberg.de/~opitz/data/s3bert_all-MiniLM-L12-v2.tar.gz)  | [config](https://www.cl.uni-heidelberg.de/~opitz/data/config_s3bert_all-MiniLM-L12-v2.py)    |
 
@@ -122,26 +123,26 @@ All numbers are Spearmanr.
 
 For both SBERT and S3BERT the similarity for every pair is calculated beased on the full embeddings.
 
-STSB: results on human sentence similarity benchmark STS -------
-SICKR: results on human relatedness similarity benchmark SICK -------
-UKPA: results on human argument similarity benchmark
+- STSB: results on human sentence similarity benchmark STS 
+- SICKR: results on human relatedness similarity benchmark SICK 
+- UKPA: results on human argument similarity benchmark
 
 #### Table Column names II: aspect similarity of explainable features
 
 For non S3BERT models the aspect similarity is calculated via the full embedding (constant scores). For S3BERT models the aspect similarities are calculated from the dedicated sub-embeddings.
 
-Concepts: Similarity w.r.t. to similarity of concepts in sentences -------
-Frames: Similarity w.r.t. to similarity of predicates in sentences -------
-Named Ent: Similarity w.r.t. named entity similarities in sentences -------
-Negation: Similarity w.r.t. negation structure of sentences -------
-Coreference: Similarity w.r.t. coreference structure of sentences -------
-SRL: Similarity w.r.t. semantic role structure of sentences -------
-Smatch: Similarity w.r.t. to overall similarity of sentences' semantic meaning structures -------
-Unlabeled: Similarity w.r.t. to overall similarity of sentences' semantic meaning structures minus relation labels -------
-(in/out/root)_degree_sim: Similarity w.r.t. to similarity of connected nodes in meaning space ("Focus") -------
-quant_sim: Similarity w.r.t.\ quantificational structure similarity of sentences(*three* vs. *four*, *a* vs. *all*, etc.) -------
-score_wlk: see Smatch, but measured with contextual Weisfeiler Leman Kernel isntead of Smatch -------
-score_wwlk: See Smatch, but measured with Wasserstein Weisfeiler Leman Kernel instead of Smatch 
+- Concepts: Similarity w.r.t. to similarity of concepts in sentences 
+- Frames: Similarity w.r.t. to similarity of predicates in sentences 
+- Named Ent: Similarity w.r.t. named entity similarities in sentences 
+- Negation: Similarity w.r.t. negation structure of sentences 
+- Coreference: Similarity w.r.t. coreference structure of sentences 
+- SRL: Similarity w.r.t. semantic role structure of sentences 
+- Smatch: Similarity w.r.t. to overall similarity of sentences' semantic meaning structures 
+- Unlabeled: Similarity w.r.t. to overall similarity of sentences' semantic meaning structures minus relation label
+- (in/out/root)_degree_sim: Similarity w.r.t. to similarity of connected nodes in meaning space ("Focus") 
+- quant_sim: Similarity w.r.t.\ quantificational structure similarity of sentences(*three* vs. *four*, *a* vs. *all*, etc.) 
+- score_wlk: see Smatch, but measured with contextual Weisfeiler Leman Kernel isntead of Smatch 
+- score_wwlk: See Smatch, but measured with Wasserstein Weisfeiler Leman Kernel instead of Smatch 
 
 ## Citation
 
@@ -155,7 +156,6 @@ If you find the work interesting, consider citing:
   year={2022}
 }
 ```
-
 
 
 
