@@ -43,7 +43,7 @@ Then `feadim` can be set approximately to `(edim - edim / 3)/n`
 
 ## Full example with AMR 
 
-In our paper, we define metrics between abstract meaning representations (AMRs) such that we can measure, e.g., coreference or quantification similarity of sentences via their AMR graphs. 
+In our paper, we define metrics between abstract meaning representations (AMRs) such that we can measure, e.g., coreference or quantification similarity of sentences and see how these sub-similarities modulate the overall similarity. 
 
 ### Get our training data
 
