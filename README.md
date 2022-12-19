@@ -30,7 +30,7 @@ The basic idea is simple:
 1. Define/apply metrics that measure similarity with regard to aspects or topics that you're interested in. 
 2. Assign a specific sub-embedding to each metric
 3. During training, it learns to route information into the assigned sub-embeddings so that they can reflect your metrics of interest. The power of the overall embedding is preserved with consistency control.
-4. In inference, you are told how the aspects have modulated overeall text similarity decision. 
+4. In inference, you are told how the aspects have modulated overall text similarity decision. 
 
 Note that any (possibly costly) computation of metrics from step 1. is **not needed in inference** 
 
