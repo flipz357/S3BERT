@@ -2,8 +2,8 @@
 
 Code for generating and training sentence embeddings with semantic features. Two main goals:
 
-- increase interpretability of sentence embeddings
-- effective aspectual clustering and semantic search (fast and accurate)
+- increase interpretability of sentence embeddings and explain similarity 
+- effective aspectual clustering and semantic search 
 
 For more information and background, please check our [AACL-IJCAI 2022 paper](https://arxiv.org/abs/2206.07023).
 
@@ -27,11 +27,12 @@ transformers                    (4.16.1)
 
 The basic idea is simple: 
 
-1. Define/apply metrics that measure similarity with regard to aspects that you're interested in (e.g., potentially using metrics on dependency trees or AMR graphs, etc.).
+1. Define/apply metrics that measure similarity with regard to aspects or topics that you're interested in. 
 2. Assign a specific sub-embedding to each metric
-3. During training, it learns to route information into the assigned sub-embeddings so that they can reflect the different metrics. The power of the overall embedding is fully preserved with consistency control.
+3. During training, it learns to route information into the assigned sub-embeddings so that they can reflect your metrics of interest. The power of the overall embedding is preserved with consistency control.
+4. In inference, you are told how the aspects have modulated overeall text similarity decision. 
 
-Note that any computation for metrics or generation of sentence parses or trees is **not needed in inference**.
+Note that any (costly) computation of metrics from step 1. is **not needed in inference** 
 
 **Rule of thumb for size of feature dimensions**. From experience with different models, about 1/3 of the embedding may be reserved for the residual.
 
@@ -129,7 +130,7 @@ For both SBERT and S3BERT the similarity for every pair is calculated on the ful
 
 For non S3BERT models the aspect similarity is calculated via the full embedding (i.e., it gives the same similarity in every aspect). For S3BERT models the aspect similarities are calculated from the dedicated sub-embeddings.
 
-- Concepts: Similarity w.r.t. to similarity of concepts in sentences 
+- Concepts: Similarity w.r.t. to similarity of concepts in sentences
 - Frames: Similarity w.r.t. to similarity of predicates in sentences 
 - Named Ent: Similarity w.r.t. named entity similarities in sentences 
 - Negation: Similarity w.r.t. negation structure of sentences 
