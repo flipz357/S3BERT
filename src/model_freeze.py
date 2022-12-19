@@ -12,15 +12,13 @@ def freeze_except_last_layers(model, n=2):
     lastn = layerids[-n:]
     lastn = ["layer." + str(lid) for lid in lastn]
 
-    # freeze model layers except last layers
     for name, param in model.named_parameters():
-        print(name)
         lid = None
         if "layer." in name:
             lid = "layer." + name.split("layer.")[1].split(".")[0]
         if lid and lid in lastn:
-            print("x", name)
             continue
         else:
             param.requires_grad = False
+    
     return None
