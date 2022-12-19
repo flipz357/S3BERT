@@ -20,18 +20,14 @@ print("Device: ", device)
 # we need an SBERT model that we can fine-tune
 # and another one which we freeze
 #--------------
-
 model = SentenceTransformer(config.SBERT_INIT, device="cuda")
 
-# init model for consistency, parameters are frozen in loss 
+# init model for consistency, parameters are frozen 
 teacher = SentenceTransformer(config.SBERT_INIT, device="cuda")
 
-# freeze model layers except last layers
-for name, param in model.named_parameters():
-    if "layer.10" in name or "layer.11" in name:
-        continue
-    else:
-        param.requires_grad = False
+freeze.freeze_except_last_layers(model, 2)
+freeze.freeze_all_layers(teacher)
+
 
 #----------------
 # 2. Data loading
