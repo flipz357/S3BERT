@@ -34,13 +34,13 @@ The basic idea is simple:
 
 Note that any (costly) computation of metrics from step 1. is **not needed in inference** 
 
-**Rule of thumb for size of feature dimensions**. From experience with different models, about 1/3 of the embedding may be reserved for the residual.
+**Rule of thumb for size of feature dimensions**: From experience with different models, about 1/3 of the embedding may be reserved for the residual.
 
 - `edim`: size of sentence embedding
 - `n`: number of custom metrics
 - `feadim`: size of a sentence feature (sentence sub-embedding)
 
-Then `feadim` can be set approximately to `(edim - edim / 3)/n`
+Then `feadim` can be set approximately to `(edim - edim / 3)/n`. 
 
 ## Full example with AMR 
 
