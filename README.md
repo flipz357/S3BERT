@@ -32,7 +32,7 @@ The basic idea is simple:
 3. During training, it learns to route information into the assigned sub-embeddings so that they can reflect your metrics of interest. The power of the overall embedding is preserved with consistency control.
 4. In inference, you are told how the aspects have modulated overeall text similarity decision. 
 
-Note that any (costly) computation of metrics from step 1. is **not needed in inference** 
+Note that any (possibly costly) computation of metrics from step 1. is **not needed in inference** 
 
 **Rule of thumb for size of feature dimensions**: From experience with different models, about 1/3 of the embedding may be reserved for the residual.
 
