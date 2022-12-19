@@ -12,7 +12,7 @@ LEARNING_RATE = 2e-5
 SBERT_INIT = "all-MiniLM-L12-v2"
 
 # where to save model and logs
-SBERT_SAVE_PATH = "s3bert_all-MiniLM-L12-v2/"
+SBERT_SAVE_PATH = "s3bert_" + SBERT_INIT + "/"
 
 # Data path to AMR data set
 DATA_PATH = "../amr_data_set/"
@@ -34,6 +34,7 @@ N = 15
 
 # Feature dimension
 FEATURE_DIM = 16
+
 
 
 

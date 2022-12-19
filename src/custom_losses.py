@@ -4,6 +4,7 @@ from typing import Iterable, Dict, Callable
 from sentence_transformers import SentenceTransformer, util
 import logging
 import numpy as np
+import model_freeze as freeze
 
 logger = logging.getLogger(__name__)
 
@@ -133,9 +134,7 @@ class MultipleConsistencyLoss(nn.Module):
         
         # freeze teacher
         self.teacher = teacher
-        for param in self.teacher.parameters():
-            param.requires_grad = False
-
+        freeze.freeze_all_layers(self.teacher)
 
     def forward(self, sentence_features: Iterable[Dict[str, Tensor]], labels: Tensor):
 
