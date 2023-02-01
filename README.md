@@ -14,13 +14,13 @@ Please make sure to have at least the following packages installed:
 ```
 package                 (version tested)
 ----------------------------------------
+torch                           (1.11.0)
+transformers                    (4.16.1)
 sentence-transformers           (2.1.0)
 numpy                           (1.21.2)          
 python                          (3.8.12)                
 scipy                           (1.7.3)        
-sentence-transformers           (2.1.0)     
-torch                           (1.11.0)
-transformers                    (4.16.1)
+[python                         (3.8.12)]
 ```
 
 ## The basic idea (how to customize)
@@ -34,7 +34,7 @@ The basic idea is simple:
 
 Note that any (possibly costly) computation of metrics from step 1. is **not needed in inference** 
 
-**Rule of thumb for size of feature dimensions**: From experience with different models, about 1/3 of the embedding may be reserved for the residual.
+**Rule of thumb for size of feature dimensions**: From experience with different models that use 15 similarity aspect metrics, about 1/3 of the embedding may be reserved for the residual.
 
 - `edim`: size of sentence embedding
 - `n`: number of custom metrics

@@ -13,13 +13,25 @@ model = SentenceTransformer("./" + config.SBERT_SAVE_PATH + "/", device="cuda")
 
 # example sentence pairs
 xsent = [
-        "the man isn't singing", "three man are singing", "two cats are looking at a window", 
+        "the man isn't singing", 
+        "three man are singing", 
+        "two cats are looking at a window", 
         "a cat is looking at a window",
-        "rocky and apollo creed are running down the beach", "a man is smoking", "The woman likes milk"] 
+        "rocky and apollo creed are running down the beach", 
+        "a man is smoking", 
+        "The woman likes milk", 
+        "A cat scratches itself", 
+        "A cat scratches itself"] 
 ysent = [
-        "the man is singing", "two men are singing", "a white cat looking out of a window",
+        "the man is singing", 
+        "two men are singing", 
+        "a white cat looking out of a window",
         "a cat is looking out of a window",
-        "the men are jogging on the beach", "a baby is sucking on a pacifier", "The man loves cheese"] 
+        "the men are jogging on the beach", 
+        "a baby is sucking on a pacifier", 
+        "The man loves cheese", 
+        "A cat scratches a cat", 
+        "A man buys himself some ice-cream"] 
 
 # encode with s3bert
 xsent_encoded = model.encode(xsent)
