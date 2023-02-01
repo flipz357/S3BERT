@@ -80,19 +80,26 @@ class DistilLoss(nn.Module):
     
 
     def forward(self, sentence_features: Iterable[Dict[str, Tensor]], labels: Tensor):
+        
         reps = [self.model(sentence_feature)['sentence_embedding'] for sentence_feature in sentence_features]
         rep_a, rep_b = reps
         
-        diffs = []
+        sims = []
         for i in range(self.num_labels):
+            
+            # get two subembeddings
             start = i * self.feature_dim
             stop = (i+1) * self.feature_dim
             rep_ax = rep_a[:, start:stop]
             rep_bx = rep_b[:, start:stop]
+
+            # and compute their similariy
             sim = self.sim_fct(rep_ax, rep_bx)
-            diffs.append(sim)
+            sims.append(sim)
         
-        outputs = torch.stack(diffs).T 
+        # sims: (n_features x n_batch)
+        # output: (n_batch x n_features)
+        outputs = torch.stack(sims).T 
         outputs = self.score_bias * outputs
         
         if labels is not None:
