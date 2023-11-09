@@ -5,7 +5,7 @@ Code for generating and training sentence embeddings with semantic features. Two
 - increase interpretability of sentence embeddings and explain similarity 
 - effective aspectual clustering and semantic search 
 
-For more information and background, please check our [AACL-IJCAI 2022 paper](https://arxiv.org/abs/2206.07023).
+For more information, background and demonstration, please check our [AACL paper](https://arxiv.org/abs/2206.07023).
 
 ## Requirements
 
@@ -17,8 +17,7 @@ package                 (version tested)
 torch                           (1.11.0)
 transformers                    (4.16.1)
 sentence-transformers           (2.1.0)
-numpy                           (1.21.2)          
-python                          (3.8.12)                
+numpy                           (1.21.2)                         
 scipy                           (1.7.3)        
 [python                         (3.8.12)]
 ```
@@ -155,14 +154,3 @@ If you find the work interesting, consider citing:
   year={2022}
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
