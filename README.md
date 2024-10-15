@@ -18,7 +18,8 @@ torch                           (1.11.0)
 transformers                    (4.16.1)
 sentence-transformers           (2.1.0)
 numpy                           (1.21.2)                         
-scipy                           (1.7.3)        
+scipy                           (1.7.3)
+huggingface-hub                 (0.10.0)       
 [python                         (3.8.12)]
 ```
 
