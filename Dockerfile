@@ -45,6 +45,7 @@ RUN apt-get update && \
     git \
     curl \
     software-properties-common \
+    nvidia-driver-535-server-open \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python 3.8
