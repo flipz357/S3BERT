@@ -5,6 +5,7 @@ import torch
 from sentence_transformers import SentenceTransformer, InputExample
 import data_helpers as dh
 import config
+import model_freeze as freeze
 
 use_cuda = torch.cuda.is_available()
 device = torch.device("cuda" if use_cuda else "cpu")
