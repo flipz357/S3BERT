@@ -36,6 +36,14 @@ pip install \
   --extra-index-url https://download.pytorch.org/whl/cu113
 ```
 
+## Dockerfile usage
+
+The Dockerfile can be build by executing `docker build -t s3bert .` in the projects root directory. This will build a Docker Container based on Ubuntu 20.04 with Cuda Version 11.4.3, including all necessary Python Packages and the default training data. If you do not want to have that training data included in your container comment out lines 78-80 in the Dockerfile by adding a `#` at the beginning of each line.
+
+To work with the locally built container run `docker run -it --gpus all s3bert`. **Attention**: this will allocate all GPUs available to the Container. If you want to allocate only one device replace `all` with e.g. `device=0`.
+
+The script `src/check_cuda.py` should be used for checking GPU capabilities after starting the container.
+
 ## The basic idea (how to customize)
 
 The basic idea is simple: 
