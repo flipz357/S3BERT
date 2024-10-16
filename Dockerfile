@@ -43,6 +43,7 @@ RUN apt-get update && \
     xz-utils \
     zlib1g-dev \   
     git \
+    curl \
     software-properties-common \
     && rm -rf /var/lib/apt/lists/*
 
@@ -56,9 +57,9 @@ RUN add-apt-repository ppa:deadsnakes/ppa && \
     && rm -rf /var/lib/apt/lists/*
 
 # Install pip for Python 3.8
-RUN wget --progress=dot:giga https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
-    python3.8 get-pip.py && \
-    rm get-pip.py
+RUN curl -L -o get-pip.py https://bootstrap.pypa.io/get-pip.py && \
+   python3.8 get-pip.py && \
+   rm get-pip.py
 
 # Install pypi packages
 RUN pip install --no-cache-dir \
@@ -74,6 +75,6 @@ RUN pip install --no-cache-dir \
 COPY . .
 
 # Download and extract the dataset
-RUN wget --progress=dot:giga https://cl.uni-heidelberg.de/~opitz/data/amr_data_set.tar.gz && \
+RUN curl -L -o amr_data_set.tar.gz https://cl.uni-heidelberg.de/~opitz/data/amr_data_set.tar.gz && \
     tar -xvzf amr_data_set.tar.gz && \
     rm amr_data_set.tar.gz
