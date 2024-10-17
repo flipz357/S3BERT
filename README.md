@@ -11,16 +11,38 @@ For more information, background and demonstration, please check our [AACL paper
 
 Please make sure to have at least the following packages installed:
 
-```
+```text
 package                 (version tested)
 ----------------------------------------
 torch                           (1.11.0)
 transformers                    (4.16.1)
 sentence-transformers           (2.1.0)
 numpy                           (1.21.2)                         
-scipy                           (1.7.3)        
+scipy                           (1.7.3)
+huggingface-hub                 (0.10.0)       
 [python                         (3.8.12)]
 ```
+
+Command for installing all needed PyPI packages:
+
+```python
+pip install \
+  torch==1.11.0+cu113 \
+  transformers==4.16.1 \
+  sentence-transformers==2.1.0 \
+  numpy==1.21.2 \ 
+  scipy==1.7.3 \ 
+  huggingface-hub==0.10.0 \ 
+  --extra-index-url https://download.pytorch.org/whl/cu113
+```
+
+## Dockerfile usage
+
+The Dockerfile can be build by executing `docker build -t s3bert .` in the projects root directory. This will build a Docker Container based on Ubuntu `20.04` with Cuda Version `11.4.3`, including all necessary Python Packages and the default training data. If you do not want to have that training data included in your container comment out the last three lines of the Dockerfile by adding a `#` at the beginning of each line.
+
+To work with the locally built container run `docker run -it --gpus all s3bert`. **Attention**: this will allocate all GPUs available to the Container. If you want to allocate only one device replace `all` with e.g. `device=0`.
+
+The script `src/check_cuda.py` should be used for checking GPU capabilities after starting the container.
 
 ## The basic idea (how to customize)
 
