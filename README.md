@@ -3,7 +3,7 @@
 ---
 
 > [!TIP]
-> If you would like to train an interpretable embedding model from scratch, please also check out our [**XPLAINSIM** software package](https://github.com/flipz357/XPLAINSIM#space-shaping). It contains streamlined and cleaned code, and allows install via pypi.
+> If you would like to train an interpretable embedding model from scratch, please also check out our [**XPLAINSIM** software package](https://github.com/flipz357/XPLAINSIM#space-shaping). It contains updated, streamlined, cleaned and maintained code, and allows install via pypi.
 
 ---
 
