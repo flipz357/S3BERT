@@ -1,5 +1,8 @@
 # S<sup>3</sup>BERT: *S*emantically *S*tructured *S*entence Embeddings
 
+> [!TIP]
+> If you would like to train an interpretable embedding model from scratch, please also check out our [**XPLAINSIM** software package](https://github.com/flipz357/XPLAINSIM). It contains streamlined and cleaned code, and allows install via pypi.
+
 Code for generating and training sentence embeddings with semantic features. Two main goals:
 
 - increase interpretability of sentence embeddings and explain similarity 
